@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_label_padding">5dp</dimen>
+    <dimen name="item_tile_ic_size">25dp</dimen>
+    <dimen name="item_tile_margin">5dp</dimen>
+    <dimen name="item_tile_badge_size">65dp</dimen>
+    <dimen name="item_description_margin">5dp</dimen>
+    <dimen name="toolbar_ic_size">35dp</dimen>
+    <dimen name="toolbar_ic_margin">7dp</dimen>
+    <dimen name="toolbar_title_text_size">20sp</dimen>
+    <dimen name="camera_btn_size">80dp</dimen>
+    <dimen name="camera_btn_inside_padding">30dp</dimen>
+</resources>

@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.solmin.sample.ContentsFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/contentsRv"
+        android:background="@color/listBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
+        app:spanCount="2"/>
+</FrameLayout>

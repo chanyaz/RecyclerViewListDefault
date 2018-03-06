@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.solmin.sample.MainFragment">
+
+    <com.solmin.sample.common.InfiniteViewPager
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pagerTabStrip"
+            android:textColor="@color/tabStripColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.solmin.sample.common.InfiniteViewPager>
+
+</LinearLayout>

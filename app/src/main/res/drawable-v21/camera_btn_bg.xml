@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/colorAccent">
+    <item>
+        <layer-list>
+            <shape android:shape="oval">
+                <solid android:color="@color/colorPrimaryDark"/>
+            </shape>
+            <item
+                android:bottom="@dimen/camera_btn_inside_padding"
+                android:left="@dimen/camera_btn_inside_padding"
+                android:right="@dimen/camera_btn_inside_padding"
+                android:top="@dimen/camera_btn_inside_padding">
+                <bitmap android:src="@drawable/ic_camera"/>
+            </item>
+        </layer-list>
+    </item>
+</ripple>
