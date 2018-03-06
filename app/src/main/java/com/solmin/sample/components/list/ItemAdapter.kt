@@ -1,5 +1,6 @@
 package com.solmin.sample.components.list
 
+import android.content.Context
 import android.support.design.widget.Snackbar
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -15,17 +16,19 @@ import com.facebook.common.executors.UiThreadImmediateExecutorService
 import com.facebook.datasource.BaseDataSubscriber
 import com.facebook.datasource.DataSource
 import com.facebook.drawee.backends.pipeline.Fresco
+import com.facebook.drawee.drawable.ProgressBarDrawable
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequest
 import com.solmin.sample.R
 import com.solmin.sample.components.list.pojo.DataItem
 import java.text.DecimalFormat
 
+
 /**
  * Itemを表示するためのAdapter.
  * Created by h_sol on 2018/02/27.
  */
-class ItemAdapter(private val itemList: List<DataItem>) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+class ItemAdapter(private val context: Context, private val itemList: List<DataItem>) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     private val TAG = ItemAdapter::class.simpleName
     private val prefetchSubscriber = object : BaseDataSubscriber<Void>() {
         override fun onFailureImpl(dataSource: DataSource<Void>?) {
@@ -36,6 +39,7 @@ class ItemAdapter(private val itemList: List<DataItem>) : RecyclerView.Adapter<I
             Log.v(TAG, "onNewResultImpl")
         }
     }
+    private val progressBarDrawable: ProgressBarDrawable = getProgressBarDrawable()
 
     init {
         // 先読み処理: Adapterが持つ全アイテムの画像をダウンロードさせる
@@ -66,6 +70,7 @@ class ItemAdapter(private val itemList: List<DataItem>) : RecyclerView.Adapter<I
 
         // 画像
         holder.itemImageView.setImageURI(item.photo)
+        holder.itemImageView.hierarchy.setProgressBarImage(progressBarDrawable)
 
         holder.itemClickArea.setOnClickListener {
             // animation
@@ -112,6 +117,18 @@ class ItemAdapter(private val itemList: List<DataItem>) : RecyclerView.Adapter<I
                     }
                     .playOn(it)
         }
+    }
+
+    /**
+     * ProgressBarのデザインを作る
+     */
+    private fun getProgressBarDrawable() : ProgressBarDrawable {
+        val progressBarDrawable = ProgressBarDrawable()
+        progressBarDrawable.color = context.resources.getColor(R.color.colorAccent)
+        progressBarDrawable.backgroundColor = context.resources.getColor(R.color.gray)
+        progressBarDrawable.radius = context.resources.getDimensionPixelSize(R.dimen.progress_bar_radius)
+
+        return progressBarDrawable
     }
 
     /**

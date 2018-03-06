@@ -52,7 +52,7 @@ class ContentsFragment : Fragment() {
         Log.d(TAG, "parse result= $response")
 
         if (response.result == ApiConstant.OK) {
-            recyclerView.adapter = ItemAdapter(response.data)
+            recyclerView.adapter = ItemAdapter(context, response.data)
         }
 
         return v

@@ -3,9 +3,11 @@
         android:color="@color/colorAccent">
     <item>
         <layer-list>
-            <shape android:shape="oval">
-                <solid android:color="@color/colorPrimaryDark"/>
-            </shape>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/colorPrimaryDark"/>
+                </shape>
+            </item>
             <item
                 android:bottom="@dimen/camera_btn_inside_padding"
                 android:left="@dimen/camera_btn_inside_padding"
