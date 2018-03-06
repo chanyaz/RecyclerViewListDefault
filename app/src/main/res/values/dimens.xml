@@ -2,6 +2,7 @@
 <resources>
     <dimen name="item_label_padding">5dp</dimen>
     <dimen name="item_tile_ic_size">25dp</dimen>
+    <dimen name="item_tile_ic_padding">3dp</dimen>
     <dimen name="item_tile_margin">5dp</dimen>
     <dimen name="item_tile_badge_size">45dp</dimen>
     <dimen name="item_description_margin">5dp</dimen>

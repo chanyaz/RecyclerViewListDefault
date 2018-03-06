@@ -60,6 +60,9 @@
 
             <ImageView
                 android:id="@+id/favoriteBtn"
+                android:scaleType="fitXY"
+                android:tint="@color/gray"
+                android:padding="@dimen/item_tile_ic_padding"
                 android:layout_width="@dimen/item_tile_ic_size"
                 android:layout_height="@dimen/item_tile_ic_size"
                 android:src="@drawable/ic_heart"/>
@@ -72,6 +75,9 @@
                 android:text="0"/>
 
             <ImageView
+                android:tint="@color/gray"
+                android:scaleType="fitXY"
+                android:padding="@dimen/item_tile_ic_padding"
                 android:layout_width="@dimen/item_tile_ic_size"
                 android:layout_height="@dimen/item_tile_ic_size"
                 android:src="@drawable/ic_comment"
