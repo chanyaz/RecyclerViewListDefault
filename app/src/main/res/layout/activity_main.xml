@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.solmin.sample.MainActivity">
 
     <!-- Toolbar -->
@@ -36,15 +37,15 @@
         android:layout_height="match_parent"/>
 
     <!-- Camera Btn -->
-    <View
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/cameraBtn"
         android:src="@drawable/ic_camera"
-        android:clickable="true"
-        android:focusable="true"
-        android:elevation="10dp"
-        android:background="@drawable/camera_btn_bg"
-        android:layout_width="@dimen/camera_btn_size"
-        android:layout_height="@dimen/camera_btn_size"
+        android:tint="@color/white"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        android:layout_margin="10dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"/>
