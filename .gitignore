@@ -30,6 +30,7 @@ Thumbs.db
 /.idea/workspace.xml
 /.idea/libraries
 .gradle
+.gradle/*
 build/
 gradle/
 .DS_Store
