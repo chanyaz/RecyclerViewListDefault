@@ -31,8 +31,7 @@
             android:id="@+id/newBadge"
             android:src="@drawable/new_badge"
             android:layout_gravity="end"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:layout_width="@dimen/item_tile_badge_size"
             android:layout_height="@dimen/item_tile_badge_size"/>
 
